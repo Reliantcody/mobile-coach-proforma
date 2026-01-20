@@ -364,9 +364,9 @@ const MobileCoachQuoteTool = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b border-gray-200">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 print:bg-white">
+      {/* Header - hidden when printing */}
+      <div className="bg-white shadow-sm border-b border-gray-200 print:hidden">
         <div className="max-w-5xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -390,8 +390,8 @@ const MobileCoachQuoteTool = () => {
         </div>
       </div>
 
-      {/* Progress Bar */}
-      <div className="bg-white border-b border-gray-200">
+      {/* Progress Bar - hidden when printing */}
+      <div className="bg-white border-b border-gray-200 print:hidden">
         <div className="max-w-5xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {['Customer Info', 'Equipment & Costs', 'Financials', 'Generate Quote'].map((label, idx) => (
@@ -424,7 +424,7 @@ const MobileCoachQuoteTool = () => {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-5xl mx-auto px-4 py-4 sm:py-6">
+      <div className="max-w-5xl mx-auto px-4 py-4 sm:py-6 print:py-0 print:px-0 print:max-w-none">
         
         {/* Step 1: Customer Info */}
         {step === 1 && (
@@ -870,10 +870,10 @@ const MobileCoachQuoteTool = () => {
 
         {/* Step 4: Quote Display */}
         {step === 4 && quote && (
-          <div className="space-y-4">
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 sm:p-8 print:shadow-none print:border-none">
+          <div className="space-y-4 print:space-y-0">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 sm:p-8 print:shadow-none print:border-none print:rounded-none print:p-0">
               {/* Quote Header */}
-              <div className="border-b-2 border-[#03989e] pb-6 mb-6">
+              <div className="border-b-2 border-black pb-6 mb-6">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-6">
                   <div className="flex items-center gap-3">
                     <svg viewBox="0 0 50 50" className="w-10 h-10 sm:w-14 sm:h-14 flex-shrink-0">
@@ -884,7 +884,7 @@ const MobileCoachQuoteTool = () => {
                     </svg>
                     <div>
                       <h1 className="text-lg sm:text-xl font-bold text-gray-800">RELIANT MEDICAL RENTALS</h1>
-                      <p className="text-xs sm:text-sm text-[#03989e]">Quality Equipment for Quality Care</p>
+                      <p className="text-xs sm:text-sm text-gray-600">Quality Equipment for Quality Care</p>
                     </div>
                   </div>
                   <div className="sm:text-right">
@@ -1148,6 +1148,14 @@ const MobileCoachQuoteTool = () => {
           .print\\:hidden { display: none !important; }
           .print\\:shadow-none { box-shadow: none !important; }
           .print\\:border-none { border: none !important; }
+          .print\\:bg-white { background: white !important; }
+          .print\\:rounded-none { border-radius: 0 !important; }
+          .print\\:p-0 { padding: 0 !important; }
+          .print\\:py-0 { padding-top: 0 !important; padding-bottom: 0 !important; }
+          .print\\:px-0 { padding-left: 0 !important; padding-right: 0 !important; }
+          .print\\:max-w-none { max-width: none !important; }
+          .print\\:space-y-0 > * + * { margin-top: 0 !important; }
+          @page { margin: 0.5in; }
         }
       `}</style>
     </div>
