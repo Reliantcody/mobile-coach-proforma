@@ -371,17 +371,12 @@ const MobileCoachQuoteTool = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               {/* Logo */}
-              <div className="flex items-center gap-1">
-                <svg viewBox="0 0 50 50" className="w-10 h-10">
-                  <path d="M18 8 L32 8 L32 18 L42 18 L42 32 L32 32 L32 42 L18 42 L18 32 L8 32 L8 18 L18 18 Z" 
-                        fill="none" stroke="#03989e" strokeWidth="2.5" strokeLinejoin="round"/>
-                  <path d="M22 14 L28 14 L28 22 L36 22 L36 28 L28 28 L28 36 L22 36 L22 28 L14 28 L14 22 L22 22 Z" 
-                        fill="none" stroke="#ff66c4" strokeWidth="1.5" strokeLinejoin="round"/>
-                </svg>
-                <div className="flex flex-col">
-                  <span className="text-[#03989e] font-bold text-lg leading-tight tracking-tight">RELIANT MEDICAL</span>
-                  <span className="text-[#ff66c4] font-bold text-lg leading-tight tracking-tight">RENTALS</span>
-                </div>
+              <div className="flex items-center gap-2">
+                <img 
+                  src="/Green Cross Medical Modern Logo.svg" 
+                  alt="Reliant Medical Rentals" 
+                  className="h-12 w-auto"
+                />
               </div>
               <div className="hidden md:block h-8 w-px bg-gray-300 mx-2"></div>
               <span className="hidden md:block text-gray-600 font-medium">Mobile Coach Proforma Generator</span>
@@ -876,16 +871,11 @@ const MobileCoachQuoteTool = () => {
               <div className="border-b-2 border-black pb-6 mb-6">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-6">
                   <div className="flex items-center gap-3">
-                    <svg viewBox="0 0 50 50" className="w-10 h-10 sm:w-14 sm:h-14 flex-shrink-0">
-                      <path d="M18 8 L32 8 L32 18 L42 18 L42 32 L32 32 L32 42 L18 42 L18 32 L8 32 L8 18 L18 18 Z" 
-                            fill="none" stroke="#03989e" strokeWidth="2.5" strokeLinejoin="round"/>
-                      <path d="M22 14 L28 14 L28 22 L36 22 L36 28 L28 28 L28 36 L22 36 L22 28 L14 28 L14 22 L22 22 Z" 
-                            fill="none" stroke="#ff66c4" strokeWidth="1.5" strokeLinejoin="round"/>
-                    </svg>
-                    <div>
-                      <h1 className="text-lg sm:text-xl font-bold text-gray-800">RELIANT MEDICAL RENTALS</h1>
-                      <p className="text-xs sm:text-sm text-gray-600">Quality Equipment for Quality Care</p>
-                    </div>
+                    <img 
+                      src="/Green Cross Medical Modern Logo.svg" 
+                      alt="Reliant Medical Rentals" 
+                      className="h-12 sm:h-16 w-auto"
+                    />
                   </div>
                   <div className="sm:text-right">
                     <h2 className="text-xl sm:text-2xl font-bold text-black">PROFORMA</h2>
