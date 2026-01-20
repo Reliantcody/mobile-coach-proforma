@@ -375,7 +375,7 @@ const MobileCoachQuoteTool = () => {
                 <img 
                   src="/Green Cross Medical Modern Logo.svg" 
                   alt="Reliant Medical Rentals" 
-                  className="h-12 w-auto"
+                  className="h-24 w-auto"
                 />
               </div>
               <div className="hidden md:block h-8 w-px bg-gray-300 mx-2"></div>
@@ -874,7 +874,7 @@ const MobileCoachQuoteTool = () => {
                     <img 
                       src="/Green Cross Medical Modern Logo.svg" 
                       alt="Reliant Medical Rentals" 
-                      className="h-12 sm:h-16 w-auto"
+                      className="h-24 sm:h-32 w-auto"
                     />
                   </div>
                   <div className="sm:text-right">
